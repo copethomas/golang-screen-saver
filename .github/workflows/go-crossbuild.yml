@@ -1,2 +1,0 @@
-name: go-crossbuild
-uses: izumin5210/action-go-crossbuild@v1.0.0

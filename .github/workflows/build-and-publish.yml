@@ -1,0 +1,17 @@
+name: build-and-publish
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: izumin5210/action-go-crossbuild@v1.0.0
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ngs/go-release.action@v1.0.2
