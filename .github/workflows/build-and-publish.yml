@@ -7,11 +7,10 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: izumin5210/action-go-crossbuild@v1.0.0
   release:
     runs-on: ubuntu-latest
     steps:
+    -
+        name: Checkout
+        uses: actions/checkout@v2
     - uses: ngs/go-release.action@v1.0.2
